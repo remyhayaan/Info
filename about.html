@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Background with Sliding Text</title>
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <section class="sec-body">
+    <nav class="navbar">
+        <div class="logo">MyCompany</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <div class="nav-menu">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+        <div class="content">
+            <!-- Company Logo Column -->
+            <div class="logo-column">
+                <div class="logo">MyCompany</div>
+            </div>
+
+            <!-- Navigation Links Column -->
+            <div class="navlinks-column">
+                <a href="../pages/index1.html"><span>01</span>Home</a>
+                <a href="../pages/about.html"><span>02</span>About</a>
+                <a href="../pages/expertise.html"><span>03</span>Expertise</a>
+                <a href="../pages/contact.html"><span>04</span>Contact</a>
+            </div>
+
+            <!-- Contact Info Column -->
+            <div class="contact-column">
+                <h2>Get in Touch</h2><br>
+                <p>MoTIV, Old Port Bell Road, Kampala</p>
+                <p>Uganda</p><br>
+                <p><a href="mailto:info@elevateug.com" style="color: black;">info@elevateug.com</a></p>
+            <p class="policy">Privacy Policy </p><br/>
+            <ul class="links">
+                <li>LinkedIn</li>
+                <li>Instagram</li>
+                <li>Facebook</li>
+            </ul>
+            </div>
+        </div>
+    </div></section>
+</head>
+<body>
+
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2015/08/08/78-135733055_medium.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay">
+      <div class="text-container">How are you?</div>
+    </div>
+  </div>
+
+  <!-- Black background section -->
+  <div class="black-section">
+    <p>
+      This is a centered paragraph with enough spacing on both sides. The content is designed to be readable and
+      aesthetically pleasing. By maintaining a 60% width, we ensure there is 20% space on each side, creating a balanced layout.
+    </p>
+  </div>
+  <div class="hero-section">
+    <div class="background-pattern"></div>
+    <img src="../images/banner4.jpg" alt="Happy Woman" class="hero-image">    
+</div>
+<div class="para-1">
+    <div class="para-2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nesciunt ad doloribus ratione quaerat pariatur. Facilis laboriosam iste dolorum in quae voluptate explicabo expedita nesciunt ullam, officiis assumenda quod a?</p>
+    </div>
+</div>
+<div class="sev-container">
+<div class="containerzz">
+  <p class="tag">/ BRANDS</p>
+  <h1 class="heading">
+      We help businesses  all around<br> the world to grow.
+  </h1>
+  <a href="#" class="services-link">
+      View our services <span>→</span>
+  </a>
+  <div class="circle"></div>
+</div></div>
+
+<div class="contact-section">
+  <div class="contact-container">
+      <div class="contact-left">
+          <h2>Have an idea?<br> Tell us about it</h2>
+          <hr>
+          <p class="email"><strong>info@elevateug.com</strong></p>
+          <p class="address">MoTIV, Old Port Bell Road, Kampala, Uganda.</p>
+          <p class="privacy"><a href="#">Privacy Policy</a></p>
+      </div>
+      <div class="contact-right">
+          <p><a href="#">Instagram</a></p>
+          <p><a href="#">LinkedIn</a></p>
+      </div>
+  </div>
+</div>
+<script src="../js/index.js"></script>
+</body>
+</html>

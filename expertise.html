@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descriptions with Logos</title>
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/try.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+  
+      .book-body {
+        background-color: black;
+        color: white;
+      }
+  
+      .header {
+        text-align: center;
+        padding: 50px 0;
+        background-color: black;
+      }
+  
+      .header h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+  
+      .header p {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+  
+      .header hr {
+        width: 180px;
+        height: 3px;
+        background-color: white;
+        border: none;
+        margin: 20px auto;
+      }
+  
+      .info-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 20px;
+        max-width: 1100px;
+        margin: auto;
+        background-color: black;
+      }
+  
+      .info-textzz {
+        flex: 1;
+        max-width: 600px;
+      }
+  
+      .info-textzz p {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-left: 30px;
+      }
+  
+      .info-image {
+        flex: 1;
+        text-align: center;
+      }
+  
+      .info-image img {
+        width: 400px;
+        height: auto;
+        border-radius: 10px;
+      }
+  
+      .description-wrapper {
+        padding: 20px;
+      }
+  
+      .description-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-align: left;
+        margin-top: 30px;
+        margin-left: 50px;
+      }
+  
+      .description-text {
+        font-size: 15px;
+        text-align: left;
+        max-width: 800px;
+        margin-left: 50px;
+      }
+  
+      .ent-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60vh;
+        padding: 20px;
+      }
+  
+      .description-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: 1000px;
+        flex-wrap: wrap;
+      }
+  
+      .description-item {
+        text-align: center;
+        width: 220px;
+        padding: 20px;
+      }
+  
+      .description-item img {
+        width: 70px;
+        height: auto;
+        margin-bottom: 10px;
+      }
+  
+      .description-item p {
+        font-size: 14px;
+        color: white;
+      }
+  
+      @media (max-width: 900px) {
+        .info-container {
+          flex-direction: column;
+          text-align: center;
+        }
+  
+        .info-image img {
+          width: 180px;
+        }
+  
+        .info-textzz p {
+          font-size: 18px;
+        }
+        .description-item {
+          text-align: center;
+          width: 275px;
+          padding: 5px;
+        }
+        .description-container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .header p {
+          font-size: 18px;
+          margin: 10px;
+        }
+      }
+      
+  </style>
+</head>
+<body>
+    <section class="sec-body">
+        <nav class="navbar">
+            <div class="logo">MyCompany</div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+        </nav>
+    
+        <div class="nav-menu">
+            <span class="close-btn" onclick="closeMenu()">×</span>
+            <div class="content">
+                <!-- Company Logo Column -->
+                <div class="logo-column">
+                    <div class="logo">MyCompany</div>
+                </div>
+    
+                <!-- Navigation Links Column -->
+                <div class="navlinks-column">
+                    <a href="../pages/index1.html"><span>01</span>Home</a>
+                    <a href="../pages/about.html"><span>02</span>About</a>
+                    <a href="../pages/expertise.html"><span>03</span>Expertise</a>
+                    <a href="../pages/contact.html"><span>04</span>Contact</a>
+                </div>
+    
+                <!-- Contact Info Column -->
+                <div class="contact-column">
+                    <h2>Get in Touch</h2><br>
+                    <p>MoTIV, Old Port Bell Road, Kampala</p>
+                    <p>Uganda</p><br>
+                    <p><a href="mailto:info@elevateug.com" style="color: black;">info@elevateug.com</a></p>
+                <p class="policy">Privacy Policy </p><br/>
+                <ul class="links">
+                    <li>LinkedIn</li>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                </ul>
+                </div>
+            </div>
+        </div></section>
+<section class="book-body">
+  <!-- Header Section -->
+  <div class="header">
+    <h1>Our Expertise</h1>
+    <p>We offer top-notch services to meet your needs.</p>
+    <hr>
+
+  </div>
+
+  <!-- Info Section with Text and Image Side by Side -->
+  <div class="info-container">
+    <div class="info-textzz">
+      <p>
+        We specialize in providing high-quality solutions tailored to your needs. Our team is dedicated to delivering exceptional results in every project.
+      </p>
+    </div>
+    <div class="info-image">
+      <img src="../images/banner.jfif" alt="Service Image">
+    </div>
+  </div>
+
+  <!-- Description Section -->
+   <div class="description-wrapper">
+  <h2 class="description-title">What We Do</h2>
+  <p class="description-text">We bring our experts together in our products to deliver disruptive creativity whatever the discipline. In marketing speak, it’s integration with deep specialization. Here’s how we do it..</p>
+</div>
+  <section class="ent-body">
+    
+    <div class="description-container">
+      <div class="description-item">
+        <img src="https://via.placeholder.com/70" alt="Logo 1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ad voluptate, corporis sed aut tempora iusto nobis debitis laborum facilis quod quidem numquam dignissimos ullam nesciunt quis beatae eius mollitia.</p>
+      </div>
+      <div class="description-item">
+        <img src="https://via.placeholder.com/70" alt="Logo 2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur magni officiis ipsam quod animi repudiandae laboriosam molestias? Quam soluta rem in. Aperiam tempore minima deleniti, hic adipisci doloribus rerum ipsum.</p>
+      </div>
+      <div class="description-item">
+        <img src="https://via.placeholder.com/70" alt="Logo 3">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi molestias laboriosam tempore non architecto est. Quaerat pariatur omnis exercitationem velit assumenda. Incidunt a, praesentium perspiciatis quasi neque deleniti natus?</p>
+      </div>
+      <div class="description-item">
+        <img src="https://via.placeholder.com/70" alt="Logo 4">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad qui sint nobis, omnis veritatis facere accusamus. Cumque non repellendus nostrum amet tempora esse ab repellat, maiores optio rerum voluptatem earum.</p>
+      </div>
+    </div>
+  </section>
+</section>
+<div class="container-content">
+  <div class="content-contain">
+      <h2 class="content-h2">Why Us</h2>
+      <div class="content">
+         
+          <div class="left-text">
+              <h2><span class="number">/1</span> We never compromise<br> for Quality</h2>
+          </div>
+          <div class="right-text">
+              <p>We don’t want our brand associated with anything that isn’t of the highest quality. We make quality things, we give quality advice and we only hire quality people</p>
+          </div>
+      </div>
+      
+      <div class="content">
+          <div class="left-text">
+              <h2><span class="number">/2</span> The experience and performance is everything</h2>
+          </div>
+          <div class="right-text">
+              <p>Our focus has always been to create intuitive and remarkable experiences for people. The experiences we craft are what we truly value and it’s what sets us apart from everyone else.</p>
+          </div>
+      </div>
+      
+      <div class="content">
+          <div class="left-text">
+              <h2><span class="number">/3</span> Do things once and do them right</h2>
+          </div>
+          <div class="right-text">
+              <p>We don’t do anything by halves. We only do things the right way with care, know-how and effort. Corners are an important part of any journey and we don’t cut them, ever.</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="contact-section">
+    <div class="contact-container">
+        <div class="contact-left">
+            <h2>Have an idea?<br> Tell us about it</h2>
+            <hr>
+            <p class="email"><strong>info@elevateug.com</strong></p>
+            <p class="address">MoTIV, Old Port Bell Road, Kampala, Uganda.</p>
+            <p class="privacy"><a href="#">Privacy Policy</a></p>
+        </div>
+        <div class="contact-right">
+            <p><a href="#">Instagram</a></p>
+            <p><a href="#">LinkedIn</a></p>
+        </div>
+    </div>
+  </div>
+ 
+<script src="../js/index.js"></script>
+</body>
+</html>

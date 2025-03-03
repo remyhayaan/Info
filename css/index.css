@@ -1,0 +1,344 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Reduced height */
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-backgrounds video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  display: flex;
+  align-items: center;
+  padding-left: 50px; /* Move text to the left */
+}
+
+.text-container {
+  color: white;
+  font-size: 5rem; /* Bigger font size */
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slideIn 1s forwards 0.5s;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Black background section */
+.black-section {
+  background-color:  #0c0c0c;
+  color: white;
+  text-align: center;
+  padding: 50px 0; /* Adjust vertical padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.black-section p {
+  width: 50%; /* 20% space on left and right */
+  margin: 0 auto; /* Center horizontally */
+  font-size: 20px;
+  line-height: 1.8; /* Improve readability */
+}
+.hero-section {
+    background-color: black; /* Set background color to black */
+    display: flex;
+    align-items: flex-start; /* Align vertically */
+    justify-content: flex-start; /* Align image to the left */
+    height: 100vh; /* Full viewport height */
+   /* Add some padding from the left */
+}
+
+.hero-image {
+    width: 80%; /* Cover 80% of the width */
+    height: 350px;; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure it covers nicely */
+}
+.para-1{
+    background-color: black;
+}
+
+.para-1 {
+    background-color: black;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Align vertically */
+}
+
+.para-2 {
+    width: 50%; /* Covers 50% of the width */
+    color: white; /* Make text white */
+    font-size: 18px; /* Adjust font size for readability */
+    line-height: 1.8; /* Improve spacing between lines */
+    text-align: justify; /* Align text for a neat look */
+    padding: 20px; /* Add some padding inside */
+    border-left: 4px solid white; /* Optional: Add left border for style */
+}
+
+.sev-container {
+  background-color: #0c0c0c;
+  color: white;
+  display: flex;
+  justify-content: flex-start; /* Align contents to the left */
+  align-items: center;
+  height: 100vh;
+  width:100%;
+  padding-left: 50px; /* Add padding to prevent text from touching the edge */
+}
+
+.containerzz {
+  width:100%;
+  padding: 20px;
+  position: relative;
+}
+
+.tag {
+  font-size: 14px;
+  color: gray;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.services-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.services-link span {
+  margin-left: 5px;
+}
+
+.services-link:hover span {
+  transform: translateX(5px);
+  transition: 0.3s;
+}
+
+/* Floating Circle */
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+p {
+font-size: 1rem;
+line-height: 1.6;
+}
+.h2-content {
+font-size: 2rem; /* Adjust size for the title */
+color: white; /* Title color */
+text-align: left; /* Align title to the left */
+margin-bottom: 10px;
+margin-left: 85px;
+}
+.contact-section {
+background-color: black;
+color: white;
+padding: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.contact-container {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+width: 80%;
+}
+
+.contact-left {
+width: 50%;
+}
+
+.contact-left h2 {
+font-size: 3rem;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.contact-left hr {
+width: 100%;
+border: 1px solid white;
+margin-bottom: 20px;
+}
+
+.contact-left .email {
+font-size: 1.2rem;
+margin-bottom: 10px;
+}
+
+.contact-left .address,
+.contact-left .privacy {
+font-size: 1rem;
+color: gray;
+}
+
+.contact-left .privacy a {
+color: white;
+text-decoration: none;
+}
+
+.contact-right {
+width: 30%;
+text-align: right;
+}
+
+.contact-right p {
+font-size: 1.2rem;
+margin-bottom: 10px;
+}
+
+.contact-right a {
+color: white;
+text-decoration: none;
+}
+@media (max-width: 768px) {
+.video-background {
+  height: 35vh; /* Further reduced height on smaller screens */
+}
+
+.overlay {
+  padding-left: 20px; /* Reduced padding on smaller screens */
+}
+
+.text-container {
+  font-size: 3rem; /* Adjusted font size for smaller screens */
+}
+
+.black-section {
+  padding: 30px 10px; /* Adjusted padding */
+}
+
+.black-section p {
+  font-size: 1rem; /* Adjusted font size */
+}
+
+.hero-section {
+  padding: 10px; /* Adjusted padding */
+}
+
+.para-1 {
+  padding: 10px; /* Adjusted padding */
+}
+
+.para-2 {
+  font-size: 0.9rem; /* Further adjusted font size */
+  padding: 15px; /* Adjusted padding */
+}
+
+.sev-container {
+  padding: 30px 10px; /* Adjusted padding */
+}
+
+.heading {
+  font-size: 2rem; /* Adjusted heading font size */
+}
+
+.h2-content {
+  margin-left: 10px; /* Adjusted margin */
+}
+
+.contact-section {
+  padding: 30px 10px; /* Adjusted padding */
+}
+
+.contact-container {
+  flex-direction: column; /* Stack on smaller screens */
+}
+
+.contact-left,
+.contact-right {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 15px; /* Adjusted margin */
+}
+
+.contact-left h2 {
+  font-size: 1.8rem; /* Adjusted heading font size */
+}
+}
+
+@media (max-width: 480px) {
+.text-container {
+  font-size: 2rem; /* Further reduced font size */
+}
+
+
+.black-section p {
+width: 80%; /* 20% space on left and right */
+margin: 0 auto; /* Center horizontally */
+/* Improve readability */
+}
+
+.heading {
+  font-size: 1.8rem; /* Further adjusted heading font size */
+}
+.text-container {
+margin-left: 20px;
+}
+
+.sev-container {
+height:30vh;
+}
+}
+
+.para-2 {
+width: 90%; /* Covers 50% of the width */
+
+}
+
+@media (max-width: 768px) {
+.hero-section {
+  flex-direction: column; /* Stack content vertically */
+  height: auto; /* Adjust height dynamically */
+  
+}
+
+.hero-image {
+  width: 100%; /* Make image take full width */
+  height: auto; /* Keep aspect ratio */
+}
+}
+
