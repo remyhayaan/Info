@@ -21,7 +21,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: #040404;
+    background-color: #0c0c0c;
     color: white;
     z-index: 1000; /* Ensures it stays on top of other elements */
 }
