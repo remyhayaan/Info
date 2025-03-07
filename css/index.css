@@ -8,7 +8,7 @@
 .video-background {
   position: relative;
   width: 100%;
-  height: 70vh; /* Reduced height */
+  height: 90vh; /* Reduced height */
   overflow: hidden;
   z-index: -1;
 }
@@ -24,25 +24,28 @@
 
 .overlay {
   position: absolute;
-  top: 0;
+  top: 10%;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
   display: flex;
   align-items: center;
-  padding-left: 50px; /* Move text to the left */
+  padding-left: 50px; /* Move text to the left */ 
+  padding-right: 50px; /* Move text to the left */
 }
 
 .text-container {
   color: white;
-  font-size: 5rem; /* Bigger font size */
+  font-size: 10px; /* Bigger font size */
   font-weight: bold;
   opacity: 0;
   transform: translateY(100%);
   animation: slideIn 1s forwards 0.5s;
 }
-
+.text-container p{
+  font-size:28px;
+}
 @keyframes slideIn {
   to {
     opacity: 1;
@@ -50,29 +53,37 @@
   }
 }
 
-/* Black background section */
 .black-section {
-  background-color:  #0c0c0c;
+  background-color: #0c0c0c;
   color: white;
   text-align: center;
-  padding: 50px 0; /* Adjust vertical padding */
+  padding: 50px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .black-section p {
-  width: 50%; /* 20% space on left and right */
-  margin: 0 auto; /* Center horizontally */
+  width: 50%;
+  margin: 0 auto;
   font-size: 20px;
-  line-height: 1.8; /* Improve readability */
+  line-height: 1.8;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Initial position below */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
+
+.black-section p.active {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Move to normal position */
+}
+
 .hero-section {
     background-color: black; /* Set background color to black */
     display: flex;
     align-items: flex-start; /* Align vertically */
     justify-content: flex-start; /* Align image to the left */
-    height: 100vh; /* Full viewport height */
+    height: 85vh; /* Full viewport height */
    /* Add some padding from the left */
 }
 
@@ -80,9 +91,6 @@
     width: 80%; /* Cover 80% of the width */
     height: 350px;; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure it covers nicely */
-}
-.para-1{
-    background-color: black;
 }
 
 .para-1 {
@@ -93,15 +101,22 @@
 }
 
 .para-2 {
-    width: 50%; /* Covers 50% of the width */
+    width: 75%; /* Covers 50% of the width */
     color: white; /* Make text white */
     font-size: 18px; /* Adjust font size for readability */
     line-height: 1.8; /* Improve spacing between lines */
     text-align: justify; /* Align text for a neat look */
     padding: 20px; /* Add some padding inside */
     border-left: 4px solid white; /* Optional: Add left border for style */
+    opacity: 0; /* Initially hidden */
+transform: translateY(50px); /* Start lower */
+transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+margin-bottom: 30px;
 }
-
+.para-2.active {
+opacity: 1; /* Fully visible */
+transform: translateY(0); /* Move to normal position */
+}
 .sev-container {
   background-color: #0c0c0c;
   color: white;
@@ -185,11 +200,11 @@ align-items: center;
 display: flex;
 justify-content: space-between;
 align-items: flex-start;
-width: 80%;
+width: 90%;
 }
 
 .contact-left {
-width: 50%;
+width: 60%;
 }
 
 .contact-left h2 {
@@ -221,7 +236,7 @@ text-decoration: none;
 }
 
 .contact-right {
-width: 30%;
+width: 40%;
 text-align: right;
 }
 
@@ -236,36 +251,27 @@ text-decoration: none;
 }
 @media (max-width: 768px) {
 .video-background {
-  height: 35vh; /* Further reduced height on smaller screens */
-}
-
-.overlay {
-  padding-left: 20px; /* Reduced padding on smaller screens */
+  height: 55vh; /* Further reduced height on smaller screens */
 }
 
 .text-container {
   font-size: 3rem; /* Adjusted font size for smaller screens */
 }
-
 .black-section {
   padding: 30px 10px; /* Adjusted padding */
 }
 
-.black-section p {
-  font-size: 1rem; /* Adjusted font size */
-}
-
 .hero-section {
-  padding: 10px; /* Adjusted padding */
+  padding: 5px; /* Adjusted padding */
 }
 
 .para-1 {
-  padding: 10px; /* Adjusted padding */
+  padding: 5px; /* Adjusted padding */
 }
 
 .para-2 {
   font-size: 0.9rem; /* Further adjusted font size */
-  padding: 15px; /* Adjusted padding */
+  padding: 8px; /* Adjusted padding */
 }
 
 .sev-container {
@@ -281,9 +287,12 @@ text-decoration: none;
 }
 
 .contact-section {
-  padding: 30px 10px; /* Adjusted padding */
+  padding: 30px 0; /* Adjusted padding */
 }
-
+  
+  .contact-container {
+  width: 90%;
+  }
 .contact-container {
   flex-direction: column; /* Stack on smaller screens */
 }
@@ -305,16 +314,27 @@ text-decoration: none;
   font-size: 2rem; /* Further reduced font size */
 }
 
-
-.black-section p {
-width: 80%; /* 20% space on left and right */
-margin: 0 auto; /* Center horizontally */
-/* Improve readability */
+.overlay {
+  padding-left: 10px; /* Move text to the left */ 
+  padding-right: 10px; /* Move text to the left */
+}
+.text-container p{
+  font-size:17px;
+}
+.black-section {
+  padding: 30px 6px; /* Adjust vertical padding */
 }
 
+.black-section p {
+  width: 100%; /* 20% space on left and right */
+  font-size: 17px;
+  line-height: 1.5; /* Improve readability */
+  margin:0 6px;
+}
 .heading {
   font-size: 1.8rem; /* Further adjusted heading font size */
 }
+
 .text-container {
 margin-left: 20px;
 }
@@ -322,11 +342,13 @@ margin-left: 20px;
 .sev-container {
 height:30vh;
 }
-}
 
 .para-2 {
-width: 90%; /* Covers 50% of the width */
-
+  width: 90%; /* Covers 50% of the width */
+  font-size: 18px; /* Adjust font size for readability */
+  line-height: 0.5; /* Improve spacing between lines */
+  padding: 10px; /* Add some padding inside */
+}
 }
 
 @media (max-width: 768px) {

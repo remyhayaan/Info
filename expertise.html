@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Descriptions with Logos</title>
-  <link rel="stylesheet" href="../css/nav.css">
-  <link rel="stylesheet" href="../css/try.css">
-  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="./css/nav.css">
+  <link rel="stylesheet" href="./css/try.css">
+  <link rel="stylesheet" href="./css/index.css">
   <style>
     * {
         margin: 0;
@@ -20,23 +20,36 @@
         color: white;
       }
   
-      .header {
+      .headerzz {
         text-align: center;
         padding: 50px 0;
         background-color: black;
       }
   
-      .header h1 {
+      .headerzz h1 {
         font-size: 28px;
         margin-bottom: 10px;
+        margin-top:50px;
       }
   
-      .header p {
+      .headerzz p {
         font-size: 18px;
         margin-bottom: 10px;
       }
   
-      .header hr {
+      .headerzz h1,
+      .headerzz p {
+        opacity: 0; /* Initially hidden */
+        transform: translateY(50px); /* Start slightly lower */
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      }
+      /* Active class to trigger animation */
+      .headerzz.active h1,
+      .headerzz.active p {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move to normal position */
+      }
+      .headerzz hr {
         width: 180px;
         height: 3px;
         background-color: white;
@@ -87,14 +100,14 @@
         margin-bottom: 5px;
         text-align: left;
         margin-top: 30px;
-        margin-left: 50px;
+        margin-left: 30px;
       }
   
       .description-text {
         font-size: 15px;
         text-align: left;
         max-width: 800px;
-        margin-left: 50px;
+        margin-left: 30px;
       }
   
       .ent-body {
@@ -111,6 +124,7 @@
         gap: 20px;
         max-width: 1000px;
         flex-wrap: wrap;
+        margin-left: 10px;
       }
   
       .description-item {
@@ -141,23 +155,39 @@
         }
   
         .info-textzz p {
-          font-size: 18px;
+          font-size: 17px;
+          margin-right:5px;
         }
+        .info-textzz p {
+          margin-left: 0;
+        }
+    
         .description-item {
           text-align: center;
           width: 275px;
           padding: 5px;
         }
+        
         .description-container {
           flex-direction: column;
           align-items: center;
         }
-        .header p {
-          font-size: 18px;
-          margin: 10px;
+        .description-title {
+          font-size: 20px;
+          margin-top: 30px;
+          margin-left: 20px;
         }
-        .header h1 {
-          
+    
+        .description-text {
+          font-size: 15px;
+          margin-left: 20px;
+        }
+        .headerzz p {
+          font-size: 18px;
+          margin-left:20px;
+          margin-right:20px;
+        }
+        .headerzz h1 {
           margin-top: 50px;
         }
     
@@ -205,7 +235,7 @@
         </div></section>
 <section class="book-body">
   <!-- Header Section -->
-  <div class="header">
+  <div class="headerzz">
     <h1>Our Expertise</h1>
     <p>We offer top-notch services to meet your needs.</p>
     <hr>
@@ -220,7 +250,7 @@
       </p>
     </div>
     <div class="info-image">
-      <img src="../images/banner.jfif" alt="Service Image">
+      <img src="./images/banner.jfif" alt="Service Image">
     </div>
   </div>
 
@@ -269,6 +299,27 @@
     </div>
   </div>
  
-<script src="../js/index.js"></script>
+<script src="./js/index.js"></script>
+<script>
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+  }
+
+  function handleScroll() {
+    const headerSection = document.querySelector('.headerzz');
+    if (isInViewport(headerSection)) {
+      headerSection.classList.add('active');
+    } else {
+      headerSection.classList.remove('active');
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Initial check in case already in view
+</script>
 </body>
 </html>

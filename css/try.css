@@ -79,11 +79,10 @@ body {
 .expertise-container {
     background-color: #000;
     color: #fff;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 40px 10px;
     position: relative;
+    margin-left:50px;
+
 }
 
 .expertise-content {
@@ -211,21 +210,21 @@ body {
 
 
 /* Background with Overlay */
-.banner {
+.bannerxx {
     position: relative;
     max-width: 100%;
     text-align: center;
     padding: 50px 0;
 }
 
-.banner img {
+.bannerxx img {
     width: 60%;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
-.overlay {
+.overlayxx {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -236,7 +235,7 @@ body {
     border-radius: 10px;
 }
 
-.banner-text {
+.banner-textxx {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -246,14 +245,14 @@ body {
     width: 80%;
 }
 
-.banner-text h2 {
+.banner-textxx h2 {
     font-size: 50px;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
 
-.banner-text p {
+.banner-textxx p {
     font-size: 24px;
     font-weight: 300;
     line-height: 1.5;
@@ -268,8 +267,7 @@ align-items: center;
 justify-content: center;
 gap: 50px;
 padding: 50px 10%;
-background-color: #ded9d9;
-border-radius: 10px;
+background-color:rgb(255, 254, 254);
 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -304,45 +302,7 @@ height: auto;
 border-radius: 10px;
 }
 
-/* Responsive Design */
 
-.hero-section {
-background-color: black; /* Set background color to black */
-display: flex;
-align-items: flex-start; /* Align vertically */
-justify-content: flex-start; /* Align image to the left */
-height: 100vh; /* Full viewport height */
-/* Add some padding from the left */
-}
-
-.hero-image {
-width: 80%; /* Cover 80% of the width */
-height: 350px;; /* Maintain aspect ratio */
-object-fit: cover; /* Ensure it covers nicely */
-}
-
-
-p {
-font-size: 1rem;
-line-height: 1.6;
-}
-
-.overlay {
-width: 100%;
-}
-
-.banner-text {
-width: 90%;
-top: 50%;
-}
-
-.banner-text h2 {
-font-size: 28px;
-}
-
-.banner-text p {
-font-size: 16px;
-}
 .container-content {
 display: flex;
 justify-content: center;
@@ -358,7 +318,7 @@ max-width: 800px;
 width: 100%;
 }
 
-.content {
+.contentxx {
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -408,6 +368,10 @@ max-width: 100%;
 .expertise-title {
     font-size: 20px;
 }
+.expertise-container {
+    padding: 40px 1px;
+    margin-left:0;
+}
 
 .content-section {
     flex-direction: column;
@@ -422,39 +386,40 @@ max-width: 100%;
 }
 
 .header-h1 {
-    font-size: 40px;
+    font-size: 26px;
     margin-bottom: 5px;
     margin-top: 95px;
+    margin-right:12px;
+    margin-left:12px;
+
 }
 
 .number-box {
-    width: 100%;
-    text-align: left;
-    margin-top: 0;
+    margin-left:16px;
 }
 
 .description-box {
     width: 100%;
 }
 
-.banner img {
+.bannerxx img {
     width: 100%;
 }
 
-.overlay {
+.overlayxx {
     width: 100%;
 }
 
-.banner-text {
+.banner-textxx {
     width: 90%;
     top: 50%;
 }
 
-.banner-text h2 {
+.banner-textxx h2 {
     font-size: 28px;
 }
 
-.banner-text p {
+.banner-textxx p {
     font-size: 16px;
 }
 
@@ -470,7 +435,12 @@ max-width: 100%;
 
 .info-text h2 {
     font-size: 28px;
-}
+}    
+    .info-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0.9;
+    }
 .hero-section {
     height: auto;
 }
@@ -478,15 +448,16 @@ max-width: 100%;
     width: 100%;
 }
 .content-contain {
-    padding: 10px;
+    padding: 8px;
 }
-.content {
+
+.contentxx {
     flex-direction: column;
     align-items: flex-start;
+    padding: 7px; /* Reduce padding */
 }
 .left-text, .right-text {
     width:100%;
-    min-width: unset;
     margin-bottom: 10px;
 }
 .left-text h2{
@@ -495,5 +466,20 @@ max-width: 100%;
 .right-text p{
     font-size: 12px;
 }
+
+.container-content {
+    padding: 10px;
+    }
+    
+.description-box {
+    width: 100%;
+    margin-right:16px;
+    margin-left:16px;
+}
+.nav-button {
+    margin-left:10px;
+    margin-right:10px;
+}
+
 
 }
